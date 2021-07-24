@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form to collect data</title>
+</head>
+<body>
+    <div class="main-block">
+        <div class="left-part">
+          <i class="fas fa-graduation-cap"></i>
+          <h1>Predict Your Selection in an placemment process</h1>
+          
+        </div>
+        <form action="res" method="POST">
+
+            {% csrf_token %}
+          <div class="title">
+            <i class="fas fa-pencil-alt"></i> 
+            <h2>Give your data here! Good Luck!!</h2>
+          </div>
+          <div class="info">
+            Gender <select required name="gender">
+                <option value="male" selected>Gender</option>
+                <option value="F" name="gender">female</option>
+                <option value="M" name="gender">male</option>
+            </select><br>
+            SCC_P Marks :<input class="ssc_p" type="text" required name="ssc_p" placeholder="ssc_p marks"> <br>
+            SCC_B <select required name="scc_b">
+                <option value="select" selected>Chhose</option>
+                <option value="Others" name="scc_b">Others</option>
+                <option value="Central" name="scc_b">Central</option>
+            </select><br>
+            HSS_P Marks :<input class="hss_p" type="text" required name="hss_p" placeholder="hss_p marks"> <br>
+            HSS_B <select required name="hss">
+                <option value="select" selected>Chhose</option>
+                <option value="Others" name="hss">Others</option>
+                <option value="Central" name="hss">Central</option>
+            </select><br>
+            HSC_S <select required name="hsc">
+                <option value="select" selected>Chhose</option>
+                <option value="Commerce" name="hsc">Commerce</option>
+                <option value="Science" name="hsc">Science</option>
+                <option value="Arts" name="hsc">Arts</option>
+            </select><br><br>
+            Degree_P Marks :<input class="degree_p" type="text" required name="degree_p" placeholder="degree_p marks"> <br>
+            Degree_t <select required name="Degree">
+                <option value="select" selected>Chhose</option>
+                <option value="Sci&Tech" name="Degree">Sci&Tech</option>
+                <option value="Comm&Mgmt" name="Degree">Comm&Mgmt</option>
+                <option value="Others" name="Degree">Others</option>
+            </select><br>
+            Workex <select required name="workex">
+                <option  selected>Gender</option>
+                <option value="Yes" name="workex">Yes</option>
+                <option value="No" name="workex">No</option>
+            </select><br><br>
+            etest_p :<input class="etest_p" type="text" required name="etest_p" placeholder="etest_p marks"> <br><br>
+            Specialisation :
+            <select required name="spec"> 
+              <option value="specialisation" selected>option</option>
+              <option value="Mkt&HR" name="spec">Mkt&HR</option>
+              <option value="Mkt&Fin" name="spec">Mkt&Fin</option>
+          </select><br><br>
+          MBA_P:<input class="mba_p" type="text" required name="mba_p" placeholder="mba_p marks"> <br><br>
+
+          </div>
+          <input type="submit" name="" value="submit">
+        </form>
+      </div>
+    </body>
+  </html>
